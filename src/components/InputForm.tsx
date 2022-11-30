@@ -1,8 +1,16 @@
 import React from 'react'
 
+interface IInputForm {
+  addTodo: AddFn;
+}
 
+type task = string;
 
-const InputForm = () => {
+const InputForm: React.FC<IInputForm> = ({ addTodo }) => {
+  
+  const [task, setTask] = useState("")
+  const [task, setTask] = useState<Task>("")
+
   
   return (
     <div className="input-form">
